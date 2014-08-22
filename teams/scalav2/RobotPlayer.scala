@@ -1,4 +1,4 @@
-package dumb
+package team008
 
 import scala.util.Random
 import util.control.Breaks._

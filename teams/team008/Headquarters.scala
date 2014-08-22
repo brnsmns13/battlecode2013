@@ -1,4 +1,4 @@
-package team008
+package dumb
 
 import scala.util.Random
 import battlecode.common._

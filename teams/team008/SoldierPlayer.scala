@@ -1,4 +1,4 @@
-package team008
+package dumb
 
 import scala.util.Random
 import battlecode.common._
@@ -24,7 +24,7 @@ class SoldierPlayer(val rc_c: RobotController, val state_c: Int) {
                 val enemy_dir = senseEnemies(current_loc)
                 if (enemy_dir != Direction.NONE && rc.canMove(enemy_dir)) {
                     rc.move(enemy_dir)
-                } else if (rc.senseEncampmentSquare(current_loc) && rc.senseCaptureCost() < (rc.getTeamPower() + 10)) {
+                } else if (rc.senseEncampmentSquare(current_loc)) {
                     rc.captureEncampment(RobotType.SUPPLIER)
                 }
                 else if(defuse_mines(current_loc)) {}
